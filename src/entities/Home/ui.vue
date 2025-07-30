@@ -19,7 +19,7 @@
 
 		<v-data-table
 			:headers="headers"
-			:items="appStore.accounts"
+			:items="appStore.accounts as Account[]"
 			item-value="id"
 			class="mt-8"
 			hide-default-footer
@@ -174,7 +174,7 @@
 		if (!raw) return;
 
 		const parsed = JSON.parse(raw);
-		appStore.accounts = parsed.map((acc: any) => ({
+		appStore.accounts = parsed.map((acc: any): Account => ({
 			...acc,
 			labelInput: Array.isArray(acc.label)
 				? acc.label.map((e: any) => e.text).join('; ')
