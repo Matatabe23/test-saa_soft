@@ -1,0 +1,8 @@
+.full-h-blocks {
+	@apply flex flex-col min-h-0 h-full;
+}
+
+.x-ident {
+	@apply px-5 md:px-6 lg:px-[70px];
+}
+
