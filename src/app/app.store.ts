@@ -1,10 +1,11 @@
 import { ref, } from 'vue';
 import { defineStore } from 'pinia';
+import { Account } from '@/entities';
 
 export const useAppStore = defineStore('app', () => {
-    const auth = ref(false);
+    const accounts = ref<Account[]>([]);
 
     return {
-        auth,
+        accounts,
     };
 });
